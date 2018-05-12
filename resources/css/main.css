@@ -10,7 +10,6 @@
 
 html,
 body {
-  min-width: 1170px;
   color: #555;
   font-family: 'Mukta Mahee', 'Arial', sans-serif;
   font-weight: 400;
@@ -87,6 +86,8 @@ img {
   width: 100px;
 }
 
+/* BUTTONS */
+
 .btn-burger {
   align-self: center;
   display: inline-block;
@@ -111,6 +112,8 @@ img {
   margin: 7px;
   background-color: #ad343e;
 }
+
+/* NAVI */
 
 .nav-main__list {
   display: none;
@@ -174,6 +177,8 @@ img {
   text-transform: lowercase;
 }
 
+/* SOCIAL */
+
 .social {
   padding: 20px;
 }
@@ -235,5 +240,69 @@ img {
   .nav-main__link:focus {
     background-color: transparent;
     padding-left: 20px;
+  }
+}
+
+/* --------------------------------------- */
+/* SERVICES */
+/* --------------------------------------- */
+
+.services {
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
+  background-image: linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .3)),
+                    url(../img/services-bcg.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin: 40px;
+  color: #f5f3f5;
+}
+
+.service__icon-box {
+  align-self: center;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+  border: 3px solid #f5f3f5;
+  border-radius: 50%;
+  font-size: 60px;
+  color: #ad343e;
+  text-align: center;
+}
+
+.service__text-box {
+  text-align: center;
+}
+
+.service__title {
+  font-size: 28px;
+  text-transform: uppercase;
+  word-spacing: 10px;
+}
+
+/* SERVICES MEDIA SCREEN */
+
+@media screen and (min-width: 767px) {
+  .service {
+    flex-direction:  row;
+    align-items: center;
+  }
+
+  .service__icon-box {
+    margin: 0 20px 0 0;
+  }
+
+  .service__text-box {
+    width: 50%;
+    text-align: left;
   }
 }
