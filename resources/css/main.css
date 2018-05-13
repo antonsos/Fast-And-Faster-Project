@@ -317,7 +317,8 @@ img {
   background-color: #f5f3f5;
 }
 
-.projects__title {
+.projects__title,
+.about__title {
   position: relative;
   width: 200px;
   margin: 0 auto;
@@ -327,7 +328,9 @@ img {
 }
 
 .projects__title::before,
-.projects__title::after {
+.projects__title::after,
+.about__title::before,
+.about__title::after {
   position: absolute;
   top: 50%;
   display: block;
@@ -337,12 +340,14 @@ img {
   background-color: #ad343e;
 }
 
-.projects__title::before {
+.projects__title::before,
+.about__title::before {
   left: 100%;
   transform: translateY(-50%);
 }
 
-.projects__title::after {
+.projects__title::after,
+.about__title::after {
   right: 100%;
   transform: translateY(-50%);
 }
@@ -399,4 +404,76 @@ img {
   .projects__item {
     width: 33.333333%;
   }
+}
+
+/* --------------------------------------- */
+/* ABOUT US */
+/* --------------------------------------- */
+
+.about {
+  min-height: 90vh;
+  padding: 10px 0;
+  background-image: linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, .7)),
+                    url(../img/about-bcg.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.about__title {
+  margin-top: 30px;
+}
+
+.about__card-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+}
+
+.about__card {
+  padding: 10px 20px;
+  margin: 0 10px;
+  margin-bottom: 15px;
+  background-color: rgba(245, 243, 245, 0.6);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.about__card-title {
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.about__card-icon {
+  font-size: 60px;
+  color: #ad343e;
+}
+
+.about__card-description {
+  text-align: justify;
+}
+
+/* ABOUT US MEDIA SCREEN */
+
+@media screen and (min-width: 767px) {
+  .about__card-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* --------------------------------------- */
+/* FILLER */
+/* --------------------------------------- */
+
+.filler {
+  min-height: 50vh;
+  background-image: url(../img/filler-bcg.jpeg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
