@@ -149,6 +149,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
   text-align: center;
 }
 
@@ -304,5 +305,98 @@ img {
   .service__text-box {
     width: 50%;
     text-align: left;
+  }
+}
+
+/* --------------------------------------- */
+/* PROJECTS */
+/* --------------------------------------- */
+
+.projects {
+  padding-top: 10px;
+  background-color: #f5f3f5;
+}
+
+.projects__title {
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.projects__title::before,
+.projects__title::after {
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 50px;
+  height: 3px;
+  content: "";
+  background-color: #ad343e;
+}
+
+.projects__title::before {
+  left: 100%;
+  transform: translateY(-50%);
+}
+
+.projects__title::after {
+  right: 100%;
+  transform: translateY(-50%);
+}
+
+.projects__item {
+  width: 100%;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.projects__img {
+  opacity: .5;
+  transform: scale(1.1);
+  transition: .3s;
+}
+
+.projects__img:hover {
+  opacity: 1;
+  transform: scale(1.25);
+}
+
+/* PROJECTS MEDIA SCREEN */
+
+@media screen and (min-width: 576px) {
+
+  .projects__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    
+    /* implementation on grids */
+    /* you need to disable shiren .projects__item */
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+  }
+
+  .projects__item {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 910px) {
+
+  .projects__list {
+    display: flex;
+    flex-wrap: wrap;
+
+
+    /* implementation on grids */
+    /* you need to disable shiren .projects__item */
+    /* grid-template-columns: repeat(3, 1fr); */
+  }
+
+  .projects__item {
+    width: 33.333333%;
   }
 }
