@@ -55,9 +55,15 @@
         <h1 class="banner__title">Company <span class="banner__amp">&amp;</span> co</h1>
         <h3 class="banner__subtitle">Car shop for fanatics </h3>
         <div class="banner__social social">
-          <a href="#" class="social__link social__link--fb"><span class="fab fa-facebook-f"></span><span class="visually-hidden">faceboo</span></a>
-          <a href="#" class="social__link social__link--in"><span class="fab fa-instagram"></span><span class="visually-hidden">instagram</span></a>
-          <a href="#" class="social__link social__link--pi"><span class="fab fa-pinterest"></span><span class="visually-hidden">pinterest</span></a>
+          <a href="#" class="social__link social__link--fb">
+            <span class="fab fa-facebook-f"></span><span class="visually-hidden">faceboo</span>
+          </a>
+          <a href="#" class="social__link social__link--in">
+            <span class="fab fa-instagram"></span><span class="visually-hidden">instagram</span>
+          </a>
+          <a href="#" class="social__link social__link--pi">
+            <span class="fab fa-pinterest"></span><span class="visually-hidden">pinterest</span>
+          </a>
         </div>
       </div>
     </div>
@@ -147,10 +153,27 @@
       </div>
     </div>
   </section>
-  <section class="filler">
+  <section class="filler"> <!--/ FILLER \-->
     &nbsp;
   </section>
-
+  <section class="contact"> <!--/ CONTACT \-->
+    <h2 class="contact__title">Contact us</h2>
+    <div class="contact__card">
+      <form action="message.php" method="POST" class="contact__form">
+        <p class="contact__box">
+          <label for="contact__name">Name</label>
+          <input type="text" name="name" id="contact__name" class="contact__name" placeholder="Name" required>
+        </p>
+        <p class="contact__box">
+          <label for="contact__email">Email</label>
+          <input type="email" name="email" id="contact__email" class="contact__email" placeholder="Email" required>
+        </p>
+        <textarea name="message" class="contact__message" cols="30" rows="8" placeholder="Save your comments"></textarea>
+        <button class="contact__btn" type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+  
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- main script -->
