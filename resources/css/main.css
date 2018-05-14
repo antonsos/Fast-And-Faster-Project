@@ -575,3 +575,20 @@ img {
     width: 50%;
   }
 }
+
+/* --------------------------------------- */
+/* FOOTER */
+/* --------------------------------------- */
+
+.footer-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  background-color: #474747;
+  color: #f5f3f5;
+}
+
+.footer-main__copy span {
+  color: #ad343e;
+}
